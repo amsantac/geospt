@@ -1,0 +1,10 @@
+citHeader("To cite package geospt in publications use:")
+
+
+citEntry(entry="Manual",
+ title = "geospt: An R package for spatial statistics.",
+ author = personList(person(given="C.", family="Melo"), person(given="A.", family="Santacruz", email="amsantac@unal.edu.co"), person(given="O.", family="Melo")),
+ year = 2012,
+ url="geospt.r-forge.r-project.org/", note ="R package version 1.0-0", textVersion = paste("Melo, C., Santacruz, A., Melo, O. 2012. geospt: An R package for spatial statistics.",
+ "R package version 1.0-0")
+)
