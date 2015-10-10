@@ -79,6 +79,7 @@ Delmelle, E., 2005. \emph{Optimization of second-phase spatial sampling using au
 See \code{\link[genalg]{rbga}} in the \code{genalg} package and \code{\link[gstat]{krige}} in the \code{gstat} package
 }
 \examples{
+\dontrun{
 ## Load data
 data(COSha10)
 data(COSha10map)
@@ -123,7 +124,6 @@ min(optpt$evaluations)
 
 ## Optimize the location of the second sequential point, taking into account 
 ## the first one
-\dontrun{
 plot(lalib)
 old.par <- par(no.readonly = TRUE)
 par(ask=FALSE)
@@ -131,11 +131,10 @@ optpt2 <- seqPtsOptNet(CorT~ 1, loc=~x+y, COSha10, m.f.esf, prevSeqs=bnet1,
     popSize=30, generations=15, xmin=bbox(lalib)[1], ymin=bbox(lalib)[2], 
     xmax=bbox(lalib)[3], ymax=bbox(lalib)[4], plotMap=TRUE, spMap=lalib)
 par(old.par)
-}
 
 ## Find the second optimal sequential point and use it, along with the first
 ## one, to find another optimal sequential point, and so on iteratively  
-\dontrun{
+
 bnet2 <- bestnet(optpt2)
 bnet <- rbind(bnet1, bnet2)
 
