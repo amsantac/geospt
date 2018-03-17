@@ -1,6 +1,8 @@
 geospt R package
 ======
 
+[![](https://cranlogs.r-pkg.org/badges/geospt)](https://cran.rstudio.com/web/packages/geospt/index.html)
+
 **Installation**
 
 The geospt R package can be installed from CRAN, the official R packages repository, or from this GitHub repository.
