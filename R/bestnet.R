@@ -1,5 +1,5 @@
 bestnet <- function(optimnet){
-	if(class(optimnet)!= "rbga") stop(paste("object must be of class rbga"))
+	if(!inherits(optimnet, 'rbga')) stop(paste("object must be of class rbga"))
 	j <- which.min(optimnet$evaluations)
 	a <- optimnet$population[j,]
 	n <- dim(optimnet$population)[2]/2

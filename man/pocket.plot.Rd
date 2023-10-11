@@ -26,8 +26,8 @@ PocketPlot of variance by rows, ie horizontal "south-north" (PVR) and PocketPlot
 \item{Iden}{ logical. The users can identify the points by themselves, TRUE or FALSE}
 \item{...}{arguments to be passed to ...}
 }
-\details{For identifying outliers, this function uses a modification of the boxplot.with.outlier.label function, available at 
-\url{http://www.r-statistics.com/wp-content/uploads/2011/01/boxplot-with-outlier-label-r.txt}
+\details{For identifying outliers, this function uses a modification of the boxplot.with.outlier.label function, see 
+\url{https://www.r-statistics.com/2011/01/how-to-label-all-the-outliers-in-a-boxplot/}
 }
 \value{
 returns (or plots) the pocket plot

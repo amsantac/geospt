@@ -25,7 +25,7 @@ Then install the geospt package from Github using the devtools package:
 devtools::install_github("amsantac/geospt")
 ```
 
-For help on the functions implemented in the geospt package see the [reference manual](/geospt-manual.pdf) or run the following command lines in R:
+For help on the functions implemented in the geospt package see the [reference manual](/geospt.pdf) or run the following command lines in R:
 
 ```{r}
 ?'geospt-package'

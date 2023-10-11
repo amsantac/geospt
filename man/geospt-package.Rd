@@ -13,16 +13,16 @@ design of optimal sampling networks through sequential and simultaneous points m
 \tabular{ll}{
 Package: \tab geospt\cr
 Type: \tab Package\cr
-Version: \tab 1.0-2\cr
-Date: \tab 2015-08-12\cr
+Version: \tab 1.0-3\cr
+Date: \tab 2023-10-10\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
 }
 \author{
-Carlos Melo <cmelo@udistrital.edu.co>, Alí Santacruz, Oscar Melo <oomelom@unal.edu.co
+Carlos Melo <cmelo@udistrital.edu.co>, Ali Santacruz, Oscar Melo <oomelom@unal.edu.co
 
-Maintainer: Alí Santacruz <amsantac@unal.edu.co>
+Maintainer: Ali Santacruz <amsantac@unal.edu.co>
 }
 \keyword{ package }
 \keyword{ spatial }

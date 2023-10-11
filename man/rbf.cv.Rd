@@ -25,7 +25,7 @@ the optimal smoothing parameter; we recommend using the parameter found by minim
 \item{rho}{
 value of optimal robustness parameter; we recommend using the parameter
 found by minimizing the root-mean-square prediction errors using cross-validation.
-\emph{eta} and \emph{rho} parameters can be optimized simultaneously, through the \code{\link[nloptr]{bobyqa}} function from \code{nloptr} or  \code{minqa} packages
+\emph{eta} and \emph{rho} parameters can be optimized simultaneously, through the \code{bobyqa} function from \code{nloptr} or \code{minqa} packages
 }
 \item{n.neigh}{
 number of nearest observations that should be used for a \emph{rbf} prediction, where nearest is defined in terms of the spatial locations

@@ -36,12 +36,12 @@ where \eqn{DA} is soil bulk density (g cm\eqn{^{-3}}), \eqn{CO} is soil organic 
 Given that the data did not fit a normal distribution, a Box-Cox transformation was applied (Box & Cox, 1964). Some samples were discarded for the design of sampling networks. The complete database and description can be found in Santacruz (2010) and in Santacruz et al., (2014). 
 }
 \source{
-Santacruz, A. 2010. \emph{Design of optimal spatial sampling networks for the monitoring of soil organic carbon at La Libertad Research Center through the application of genetic algorithms}. M.Sc. Thesis. National University of Colombia, Bogotá. 162 p. (In Spanish)
+Santacruz, A. 2010. \emph{Design of optimal spatial sampling networks for the monitoring of soil organic carbon at La Libertad Research Center through the application of genetic algorithms}. M.Sc. Thesis. National University of Colombia, Bogota. 162 p. (In Spanish)
 }
 \references{
-Santacruz, A., Rubiano, Y., Melo, C., 2014. \emph{Evolutionary optimization of spatial sampling networks designed for the monitoring of soil carbon}. In: Hartemink, A., McSweeney, K. (Eds.). \emph{Soil Carbon. Series: Progress in Soil Science}. (pp. 77-84). Springer. \href{http://link.springer.com/chapter/10.1007/978-3-319-04084-4_8}{[link]}
+Santacruz, A., Rubiano, Y., Melo, C., 2014. \emph{Evolutionary optimization of spatial sampling networks designed for the monitoring of soil carbon}. In: Hartemink, A., McSweeney, K. (Eds.). \emph{Soil Carbon. Series: Progress in Soil Science}. (pp. 77-84). Springer. \href{https://link.springer.com/chapter/10.1007/978-3-319-04084-4_8}{[link]}
 
-Santacruz, A., 2011. \emph{Evolutionary optimization of spatial sampling networks. An application of genetic algorithms and geostatistics for the monitoring of soil organic carbon}. Editorial Académica Española. 183 p. ISBN: 978-3-8454-9815-7 (In Spanish) \href{http://www.amazon.com/Optimización-evolutiva-redes-espaciales-muestreo/dp/3845498153/}{[link]}
+Santacruz, A., 2011. \emph{Evolutionary optimization of spatial sampling networks. An application of genetic algorithms and geostatistics for the monitoring of soil organic carbon}. Editorial Academica Espanola. 183 p. ISBN: 978-3-8454-9815-7 (In Spanish) \href{https://www.amazon.com/Optimizacion-evolutiva-redes-espaciales-muestreo/dp/3845498153}{[link]}
 
 Guo, L., Gifford, R., 2002. \emph{Soil carbon stocks and land use change: a meta analysis}. Global Change Biology 8, 345-360.
 

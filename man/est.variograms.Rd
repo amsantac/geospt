@@ -73,7 +73,7 @@ Cressie, N.A.C., 1993. \emph{Statistics for Spatial Data}. Wiley.
 
 Majure, J., Gebhardt, A., 2009. sgeostat: An Object-oriented Framework for Geostatistical Modeling in S+. R package version 1.0-23.
 
-Roustant O., Dupuy, D., Helbert, C., 2007. \emph{Robust Estimation of the Variogram in Computer Experiments}. Ecole des Mines, Département 3MI, 158 Cours Fauriel, 42023 Saint-Etienne, France
+Roustant O., Dupuy, D., Helbert, C., 2007. \emph{Robust Estimation of the Variogram in Computer Experiments}. Ecole des Mines, Departement 3MI, 158 Cours Fauriel, 42023 Saint-Etienne, France
 }
 \note{
 Based on the \code{\link[sgeostat]{est.variogram}} function of the \code{sgeostat} package

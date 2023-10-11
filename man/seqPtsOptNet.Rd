@@ -69,9 +69,9 @@ other arguments to be passed to \code{gstat} or \code{rbga}
 an object of class rbga containing the population and the evaluation of the objective function for each chromosome in the last generation, the best and mean evaluation value in each generation, and additional information
 }
 \references{
-Santacruz, A., Rubiano, Y., Melo, C., 2014. \emph{Evolutionary optimization of spatial sampling networks designed for the monitoring of soil carbon}. In: Hartemink, A., McSweeney, K. (Eds.). \emph{Soil Carbon. Series: Progress in Soil Science}. (pp. 77-84). Springer. \href{http://link.springer.com/chapter/10.1007/978-3-319-04084-4_8}{[link]}
+Santacruz, A., Rubiano, Y., Melo, C., 2014. \emph{Evolutionary optimization of spatial sampling networks designed for the monitoring of soil carbon}. In: Hartemink, A., McSweeney, K. (Eds.). \emph{Soil Carbon. Series: Progress in Soil Science}. (pp. 77-84). Springer. \href{https://link.springer.com/chapter/10.1007/978-3-319-04084-4_8}{[link]}
 
-Santacruz, A., 2011. \emph{Evolutionary optimization of spatial sampling networks. An application of genetic algorithms and geostatistics for the monitoring of soil organic carbon}. Editorial Académica Española. 183 p. ISBN: 978-3-8454-9815-7 (In Spanish) \href{http://www.amazon.com/Optimización-evolutiva-redes-espaciales-muestreo/dp/3845498153/}{[link]}
+Santacruz, A., 2011. \emph{Evolutionary optimization of spatial sampling networks. An application of genetic algorithms and geostatistics for the monitoring of soil organic carbon}. Editorial Academica Espanola. 183 p. ISBN: 978-3-8454-9815-7 (In Spanish) \href{https://www.amazon.com/Optimizacion-evolutiva-redes-espaciales-muestreo/dp/3845498153/}{[link]}
 
 Delmelle, E., 2005. \emph{Optimization of second-phase spatial sampling using auxiliary information}. Ph.D. Thesis, Dept. Geography, State University of New York, Buffalo, NY.
 }

@@ -20,7 +20,7 @@ rbf(formula, data, eta, rho, newdata, n.neigh, func)
 found by minimizing the root-mean-square prediction errors using cross-validation}
 \item{rho}{the optimal parameter robustness, we recommend using the parameter
 found by minimizing the root-mean-square prediction errors using cross-validation.
-eta and rho parameters can be optimized simultaneously, through the \code{\link[nloptr]{bobyqa}} function from \code{nloptr} or  \code{minqa} packages}
+eta and rho parameters can be optimized simultaneously, through the \code{bobyqa} function from \code{nloptr} or \code{minqa} packages}
 \item{newdata}{data frame or spatial object with prediction/simulation locations; should contain attribute columns with the independent variables (if present) and (if locations is a formula) the coordinates with names, as defined in locations where you want to generate new predictions}
 \item{n.neigh}{number of nearest observations that should be used for a \emph{rbf}
 prediction, where nearest is defined in terms of the spatial locations}
