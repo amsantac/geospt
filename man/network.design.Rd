@@ -2,13 +2,13 @@
 \alias{network.design}
 
 \title{
-Generating \code{ASEPE} associated with a conditioned network design
+Generating \code{AKSE} associated with a conditioned network design
 }
 \description{
-Generates a sampling network for a given sampling distance or type (configuration), and calculates the average kriging standard error prediction errors (\code{ASEPE}) associated with the spatial configuration for a given predefined variogram 
+Generates a sampling network for a given sampling distance or type (configuration), and calculates the average kriging standard error (\code{AKSE}) associated with the spatial configuration for a given predefined variogram
 }
 \usage{
-network.design(formula, vgm.model, xmin, xmax, ymin, ymax, npoint.x, npoint.y, 
+network.design(formula, vgm.model, xmin, xmax, ymin, ymax, npoint.x, npoint.y,
 npoints, boundary=NULL, type, ...)
 }
 
@@ -30,33 +30,35 @@ npoints, boundary=NULL, type, ...)
 Fibonacci sampling: Alvaro Gonzalez, 2010. \emph{Measurement of Areas on a Sphere Using Fibonacci and Latitude-Longitude Lattices}. Mathematical Geosciences 42(1), p. 49-64
 }
 \value{
-returns the \code{ASEPE} value associated with the spatial distribution of points and the kriging method used.
+returns the \code{AKSE} value associated with the spatial distribution of points and the kriging method used.
 }
 \seealso{
-\code{\link{krige}},  \code{\link{krige.cv}}, \code{\link{spsample}}, \code{\link{point.in.polygon}}, \code{\link{sample}} 
+\code{\link{krige}},  \code{\link{krige.cv}}, \code{\link{spsample}}, \code{\link{point.in.polygon}}, \code{\link{sample}}
 }
 \examples{
 \dontrun{
 ### regular grid 10x10
-vgm1 <- vgm(112.33, "Sph", 4.3441,0)
+vgmok <- vgm(112.33, "Sph", 4.3441,0)
+vgmsk <- vgm(74.703, "Sph", 3.573,0)
+vgmuk <- vgm(53.064, "Sph", 2.8858,0)
+vgmuk2 <- vgm(19.201, "Sph", 1.5823,0)
 # network: ordinary kriging (without boundary)
-net1.ok <- network.design(z~1,vgm1, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=10, 
+net1.ok <- network.design(z~1,vgmok, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=10,
     npoint.y=10, nmax=6)
-net2.ok <- network.design(z~1,vgm1, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=20, 
+net2.ok <- network.design(z~1,vgmok, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=20,
     npoint.y=20, nmax=6)
-# it's worth noting that the variograms are different in each kriging,  
-# but for this example, the same variogram is used just to show how the function works
+# it's worth noting that the variograms are different in each kriging
 
 # network: simple kriging (without boundary)
 
-net1.sk <- network.design(z~1,vgm1, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=10, 
+net1.sk <- network.design(z~1,vgmsk, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=10,
     npoint.y=10, nmax=6, beta=2)
-net2.sk <- network.design(z~1,vgm1, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=20, 
+net2.sk <- network.design(z~1,vgmsk, xmin=0,xmax=10, ymin=0, ymax=10, npoint.x=20,
     npoint.y=20, nmax=6, beta=2)
 # network: universal kriging, second order trend (without boundary)
-net1.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2),vgm1, xmin=0,xmax=10, ymin=0, 
+net1.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2),vgmuk, xmin=0,xmax=10, ymin=0,
     ymax=10, npoint.x=10, npoint.y=10, nmax=8)
-net2.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2),vgm1, xmin=0,xmax=10, ymin=0, 
+net2.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2),vgmuk2, xmin=0,xmax=10, ymin=0,
     ymax=10, npoint.x=20, npoint.y=20, nmax=8)
 
 
@@ -66,18 +68,21 @@ data(ca20)
 Sr1 <- Polygon(ca20$borders)
 Srs1 = Polygons(list(Sr1), "s1")
 Polygon = SpatialPolygons(list(Srs1))
-vgm2 <- vgm(112.33, "Sph", 15000,0)
+vgmok.ca <- vgm(112.33, "Sph", 244.9,0)
+vgmsk.ca <- vgm(100, "Sph", 150.2,0)
+vgmuk.ca <- vgm(85.57, "Sph", 110.5,0)
+vgmuk2.ca <- vgm(62.14, "Sph", 89.7,0)
 
 # network: ordinary kriging (with boundary)
-netb1.ok<- network.design(z~1, vgm2, npoints=50, boundary=Polygon, nmax=6)
-netb2.ok<- network.design(z~1, vgm2, npoints=100, boundary=Polygon, nmax=6)
+netb1.ok<- network.design(z~1, vgmok.ca, npoints=50, boundary=Polygon, nmax=6)
+netb2.ok<- network.design(z~1, vgmok.ca, npoints=100, boundary=Polygon, nmax=6)
 # network: simple kriging (with boundary)
-netb1.sk <- network.design(z~1, vgm2, npoints=50, boundary=Polygon, nmax=6, beta=2)
-netb2.sk <- network.design(z~1, vgm2, npoints=100, boundary=Polygon, nmax=6, beta=2)
+netb1.sk <- network.design(z~1, vgmsk.ca, npoints=50, boundary=Polygon, nmax=6, beta=2)
+netb2.sk <- network.design(z~1, vgmsk.ca, npoints=100, boundary=Polygon, nmax=6, beta=2)
 # network: universal kriging, second order trend (with boundary)
-netb1.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2), vgm2, npoints=50, 
+netb1.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2), vgmuk.ca, npoints=50,
     boundary=Polygon, nmax=8)
-netb2.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2), vgm2, npoints=100, 
+netb2.uk <- network.design(z~x + y + x*y + I(x^2)+I(y^2), vgmuk2.ca, npoints=100,
     boundary=Polygon, nmax=8)
 }
 }

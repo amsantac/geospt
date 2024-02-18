@@ -1,12 +1,12 @@
 Package: geospt
 Type: Package
 Title: Geostatistical Analysis and Design of Optimal Spatial Sampling Networks
-Version: 1.0-3
-Date: 2023-10-10
+Version: 1.0-4
+Date: 2024-02-19
 Author: Carlos Melo <cmelo@udistrital.edu.co>, Ali Santacruz, Oscar
         Melo <oomelom@unal.edu.co>
 Maintainer: Ali Santacruz <amsantac@unal.edu.co>
-Depends: R (>= 2.15.0), gstat, genalg, MASS, sp, minqa
+Depends: R (>= 3.5.0), gstat, genalg, MASS, sp, minqa
 Imports: limSolve, fields, gsl, plyr, TeachingDemos, sgeostat, grDevices, stats, methods, graphics, utils
 Description: Estimation of the variogram through trimmed mean, radial basis 
         functions (optimization, prediction and cross-validation), summary

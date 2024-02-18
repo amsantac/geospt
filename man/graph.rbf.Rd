@@ -40,11 +40,11 @@ Johnston, K., Ver, J., Krivoruchko, K., Lucas, N. 2001. \emph{Using ArcGIS Geost
 }
 \examples{
 data(preci)
+\dontrun{
 coordinates(preci)<-~x+y
 # optimizing eta
 graph.rbf(prec~1, preci, eta.opt=TRUE, rho.opt=FALSE, n.neigh=9, func="TPS", 
     np=40, eta.dmax=0.2, P.T=TRUE)
-\dontrun{
 # optimizing rho
 graph.rbf(prec~x+y, preci, eta.opt=FALSE, rho.opt=TRUE, n.neigh=9, func="M", 
     np=20, rho.dmax=2, P.T=TRUE)

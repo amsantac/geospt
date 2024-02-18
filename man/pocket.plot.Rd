@@ -12,7 +12,7 @@ to exploit the spatial nature of the data through the coordinates
 of rows and columns (east "X" and north "Y", respectively).
 }
 \usage{
-pocket.plot(data, graph, X, Y, Z, Iden, ...)
+pocket.plot(data, graph, X, Y, Z, Iden=F, ...)
 }
 
 \arguments{
@@ -23,10 +23,10 @@ PocketPlot of variance by rows, ie horizontal "south-north" (PVR) and PocketPlot
 \item{X}{defined by the spatial coordinates}
 \item{Y}{defined by the spatial coordinates}
 \item{Z}{regionalized variable with which you construct the statistics associated with the probability or standardized variance, these are plotted in the so-called pocket plot}
-\item{Iden}{ logical. The users can identify the points by themselves, TRUE or FALSE}
+\item{Iden}{ logical. The users can identify the points by themselves, TRUE or FALSE. FALSE by default is used.}
 \item{...}{arguments to be passed to ...}
 }
-\details{For identifying outliers, this function uses a modification of the boxplot.with.outlier.label function, see 
+\details{For identifying outliers, this function uses a modification of the boxplot.with.outlier.label function, available at 
 \url{https://www.r-statistics.com/2011/01/how-to-label-all-the-outliers-in-a-boxplot/}
 }
 \value{
@@ -60,7 +60,7 @@ text(coalash$x,coalash$y,coalash$coalash,cex=0.6)
 
 # This serves as verification that these rows are potentially problematic
 
-# Analysis of local stationarity in probabilities of the coal in south-north direction 
+# Analysis of local stationarity in probabilities of the coal in south-north direction
 
 pocket.plot(coalash, "PPR", coalash$x, coalash$y, coalash$coalash, FALSE)
 

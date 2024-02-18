@@ -1,4 +1,4 @@
-export(bestnet, bp.with.outlier.label, criterio.cv, extractFormula, est.variograms, graph.rbf, network.design, pocket.plot, rbf, rbf.cv, rbf.cv1, RBF.phi, rbf.tcv, samplePts, seqPtsOptNet, simPtsOptNet)
+exportPattern("^[[:alpha:]]+")
 import(gstat, genalg, MASS, plyr)
 importFrom(sp, 	rbind.SpatialPoints,
 	rbind.SpatialPointsDataFrame, 
@@ -15,8 +15,8 @@ importFrom(fields, rdist)
 importFrom(gsl, expint_E1)
 importFrom(TeachingDemos, spread.labs)
 importFrom(sgeostat, which.na)
-importFrom("grDevices", "boxplot.stats", "heat.colors")
+importFrom("grDevices", "boxplot.stats", "heat.colors", "recordPlot")
 importFrom("stats", "cor", "delete.response", "median", "model.extract", "model.frame", "model.matrix", "na.omit", "optimize", "predict", "terms")
 importFrom("methods", "as")
-importFrom("graphics", "abline", "box", "boxplot", "identify", "par", "points", "segments", "strheight", "strwidth", "text")
+importFrom("graphics", "abline", "box", "boxplot", "identify", "par", "points", "segments", "strheight", "strwidth", "text", "legend")
 importFrom("utils", "setTxtProgressBar", "txtProgressBar")
