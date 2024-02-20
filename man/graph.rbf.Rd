@@ -39,8 +39,8 @@ Returns a graph that describes the behavior of the optimized \emph{eta} or \emph
 Johnston, K., Ver, J., Krivoruchko, K., Lucas, N. 2001. \emph{Using ArcGIS Geostatistical Analysis}. ESRI.
 }
 \examples{
-data(preci)
 \dontrun{
+data(preci)
 coordinates(preci)<-~x+y
 # optimizing eta
 graph.rbf(prec~1, preci, eta.opt=TRUE, rho.opt=FALSE, n.neigh=9, func="TPS", 
