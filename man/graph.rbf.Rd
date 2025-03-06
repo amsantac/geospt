@@ -33,35 +33,35 @@ rho.dmax, P.T, iter, ...)
 }
 }
 \value{
-Returns a graph that describes the behavior of the optimized \emph{eta} or \emph{rho} parameter, and a table of values associated with the graph including optimal smoothing \emph{eta} or \emph{rho} parameters. If both \emph{eta} and \emph{rho} are FALSE simultaneously, then the function returns a list with; the best value obtained from the combinations smoothing \emph{eta} and \emph{rho} parameters and a lattice plot of class "trellis" with RMSPE pixel values associated with combinations of \emph{eta} and \emph{rho} parameters. Finally if both \emph{eta} and \emph{rho} are TRUE, the function will return a list with the best combination of values of the smoothing \emph{eta} or \emph{rho} parameters and the RMSPE associated with these. 
+Returns a graph that describes the behavior of the optimized \emph{eta} or \emph{rho} parameter, and a table of values associated with the graph including optimal smoothing \emph{eta} or \emph{rho} parameters. If both \emph{eta} and \emph{rho} are FALSE simultaneously, then the function returns a list with; the best value obtained from the combinations smoothing \emph{eta} and \emph{rho} parameters and a lattice plot of class "trellis" with RMSPE pixel values associated with combinations of \emph{eta} and \emph{rho} parameters. Finally if both \emph{eta} and \emph{rho} are TRUE, the function will return a list with the best combination of values of the smoothing \emph{eta} or \emph{rho} parameters and the RMSPE associated with these.
 }
 \references{
 Johnston, K., Ver, J., Krivoruchko, K., Lucas, N. 2001. \emph{Using ArcGIS Geostatistical Analysis}. ESRI.
 }
 \examples{
-\dontrun{
 data(preci)
 coordinates(preci)<-~x+y
 # optimizing eta
-graph.rbf(prec~1, preci, eta.opt=TRUE, rho.opt=FALSE, n.neigh=9, func="TPS", 
+graph.rbf(prec~1, preci, eta.opt=TRUE, rho.opt=FALSE, n.neigh=9, func="TPS",
     np=40, eta.dmax=0.2, P.T=TRUE)
+\dontrun{
 # optimizing rho
-graph.rbf(prec~x+y, preci, eta.opt=FALSE, rho.opt=TRUE, n.neigh=9, func="M", 
+graph.rbf(prec~x+y, preci, eta.opt=FALSE, rho.opt=TRUE, n.neigh=9, func="M",
     np=20, rho.dmax=2, P.T=TRUE)
 # optimizing eta and rho
-tps.lo <- graph.rbf(prec~1, preci, eta.opt=TRUE, rho.opt=TRUE, n.neigh=9, func="TPS", 
+tps.lo <- graph.rbf(prec~1, preci, eta.opt=TRUE, rho.opt=TRUE, n.neigh=9, func="TPS",
     eta.dmax=2, rho.dmax=2, x0=c(0.1,0.1), iter=40)
 tps.lo$Opt  # best combination of eta and rho obtained
 # other optimization options
-opt.u <- uobyqa(c(0.1,0.1), rbf.cv1, control = list(maxfun=40), formula=prec~1, data=preci, 
+opt.u <- uobyqa(c(0.1,0.1), rbf.cv1, control = list(maxfun=40), formula=prec~1, data=preci,
                 n.neigh=9, func="TPS")
-opt.n <- newuoa(c(0.1,0.1), rbf.cv1, control = list(maxfun=40), formula=prec~1, data=preci, 
+opt.n <- newuoa(c(0.1,0.1), rbf.cv1, control = list(maxfun=40), formula=prec~1, data=preci,
                 n.neigh=9, func="TPS")
 # lattice of RMSPE values associated with a range of eta and rho, without optimization
-tps.l <- graph.rbf(prec~1, preci, eta.opt=FALSE, rho.opt=FALSE, n.neigh=9, func="TPS", 
+tps.l <- graph.rbf(prec~1, preci, eta.opt=FALSE, rho.opt=FALSE, n.neigh=9, func="TPS",
     np=10, eta.dmax=2, rho.dmax=2)
 tps.l$opt.table  # best combination of eta and rho obtained from lattice
-tps.ls$pplot     # lattice of RMSPE
+tps.l$spplot     # lattice of RMSPE
 }
 }
 

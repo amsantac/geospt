@@ -1,8 +1,8 @@
 Package: geospt
 Type: Package
 Title: Geostatistical Analysis and Design of Optimal Spatial Sampling Networks
-Version: 1.0-4
-Date: 2024-02-19
+Version: 1.0-5
+Date: 2025-03-06
 Author: Carlos Melo <cmelo@udistrital.edu.co>, Ali Santacruz, Oscar
         Melo <oomelom@unal.edu.co>
 Maintainer: Ali Santacruz <amsantac@unal.edu.co>
