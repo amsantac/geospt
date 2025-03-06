@@ -2,9 +2,19 @@ Package: geospt
 Type: Package
 Title: Geostatistical Analysis and Design of Optimal Spatial Sampling Networks
 Version: 1.0-5
-Date: 2025-03-06
-Author: Carlos Melo <cmelo@udistrital.edu.co>, Ali Santacruz, Oscar
-        Melo <oomelom@unal.edu.co>
+Date: 2025-03-07
+Authors@R: c(person(given = "Carlos",
+                      family = "Melo",
+                      role = "aut",
+                      email = "cmelo@udistrital.edu.co"),
+               person(given = "Ali",
+                      family = "Santacruz",
+                      role = c("aut", "cre"),
+                      email = "amsantac@unal.edu.co"),
+               person(given = "Oscar",
+                      family = "Melo",
+                      role = "aut",
+                      email = "oomelom@unal.edu.co"))
 Maintainer: Ali Santacruz <amsantac@unal.edu.co>
 Depends: R (>= 3.5.0), gstat, genalg, MASS, sp, minqa
 Imports: limSolve, fields, gsl, plyr, TeachingDemos, sgeostat, grDevices, stats, methods, graphics, utils

@@ -24,7 +24,7 @@ npoints, boundary=NULL, type, ...)
 \item{ymax}{maximum \code{y}-coordinate of the study area.}
 \item{boundary}{SpatialPolygons or SpatialPolygonsDataFrame object}
 \item{type}{character; "random" for completely spatial random; "regular" for regular (systematically aligned) sampling; "stratified" for stratified random (one single random location in each "cell"); "nonaligned" for nonaligned systematic sampling (nx random y coordinates, ny random x coordinates); "hexagonal" for sampling on a hexagonal lattice; "clustered" for clustered sampling; "Fibonacci" for Fibonacci sampling on the sphere (see references). By default type ="regular".}
-\item{...}{further arguments will be passed of the \code{\link{krige}} and \code{\link{spsample}} functions.}
+\item{...}{further arguments will be passed of the \code{\link[gstat]{krige}} and \code{\link[sp]{spsample}} functions.}
 }
 \references{
 Fibonacci sampling: Alvaro Gonzalez, 2010. \emph{Measurement of Areas on a Sphere Using Fibonacci and Latitude-Longitude Lattices}. Mathematical Geosciences 42(1), p. 49-64
@@ -33,7 +33,7 @@ Fibonacci sampling: Alvaro Gonzalez, 2010. \emph{Measurement of Areas on a Spher
 returns the \code{AKSE} value associated with the spatial distribution of points and the kriging method used.
 }
 \seealso{
-\code{\link{krige}},  \code{\link{krige.cv}}, \code{\link{spsample}}, \code{\link{point.in.polygon}}, \code{\link{sample}}
+\code{\link[gstat]{krige}},  \code{\link[gstat]{krige.cv}}, \code{\link[sp]{spsample}}, \code{\link[sp]{point.in.polygon}}, \code{\link{sample}}
 }
 \examples{
 \dontrun{

@@ -33,7 +33,7 @@ found by minimizing the root-mean-square prediction errors using cross-validatio
 returns the RMSPE value
 }
 \seealso{
-\code{\link{idw}}
+\code{\link[gstat:krige]{gstat::idw()}}
 }
 \examples{
 data(preci)
