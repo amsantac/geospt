@@ -6,7 +6,8 @@ Date: 2025-03-07
 Authors@R: c(person(given = "Carlos",
                       family = "Melo",
                       role = "aut",
-                      email = "cmelo@udistrital.edu.co"),
+                      email = "cmelo@udistrital.edu.co",
+                      comment = c(ORCID = "0000-0002-5598-1913")),
                person(given = "Ali",
                       family = "Santacruz",
                       role = c("aut", "cre"),
@@ -14,7 +15,8 @@ Authors@R: c(person(given = "Carlos",
                person(given = "Oscar",
                       family = "Melo",
                       role = "aut",
-                      email = "oomelom@unal.edu.co"))
+                      email = "oomelom@unal.edu.co",
+                      comment = c(ORCID = "0000-0002-0296-4511")))
 Maintainer: Ali Santacruz <amsantac@unal.edu.co>
 Depends: R (>= 3.5.0), gstat, genalg, MASS, sp, minqa
 Imports: limSolve, fields, gsl, plyr, TeachingDemos, sgeostat, grDevices, stats, methods, graphics, utils
