@@ -21,7 +21,7 @@ assign("rbf",
          XT <- lapply(1:nrow(coordinates(newdata)), function(i) Xi[[i]][vec.orden1[,i],])
          rm(vec.orden, Xi)
          Lambda <- lapply(1:nrow(coordinates(newdata)), function(i) 
-           I.PHI.M[[i]] %*%(b[, i] - as.matrix(XT[[i]]) %*% (Solve(t(XT[[i]]) %*% I.PHI.M[[i]] %*% XT[[i]])) %*% 
+           I.PHI.M[[i]] %*%(b[, i] - as.matrix(XT[[i]]) %*% (ginv(t(XT[[i]]) %*% I.PHI.M[[i]] %*% XT[[i]])) %*% 
                               (t(XT[[i]]) %*% I.PHI.M[[i]] %*% b[,i] - x0[i, ])))
          remove(I.PHI.M, XT, x0)
          pred <- lapply(1:nrow(coordinates(newdata)), function(i) t(Lambda[[i]])%*%z[vec.orden1[, i]])
