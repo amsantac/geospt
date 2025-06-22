@@ -2,6 +2,7 @@ geospt R package
 ======
 
 [![](https://cranlogs.r-pkg.org/badges/geospt)](https://cran.rstudio.com/web/packages/geospt/index.html)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/geospt)](https://cran.r-project.org/package=geospt)
 
 **Installation**
 
