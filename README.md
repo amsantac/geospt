@@ -1,8 +1,12 @@
 geospt R package
 ======
 
+<!-- badges: start -->
 [![](https://cranlogs.r-pkg.org/badges/geospt)](https://cran.rstudio.com/web/packages/geospt/index.html)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/geospt)](https://cran.r-project.org/package=geospt)
+[![R-CMD-check](https://github.com/amsantac/geospt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/amsantac/geospt/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 
 **Installation**
 
